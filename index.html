@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GONZALEZ MAXIMILIANO - Estudio Jurídico</title>
+    <!-- Fuentes tipográficas -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Cinzel:wght@600;700;800&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header class="navbar">
+        <div class="logo-container">
+            <div class="logo-brand">
+                <span class="logo-monogram">G<span class="gold">M</span></span>
+                <div class="logo-text-block">
+                    <span class="logo-title">GONZALEZ <span class="gold">MAXIMILIANO</span></span>
+                    <span class="logo-subtext">ESTUDIO JURÍDICO</span>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#areas">Áreas</a></li>
+                <li><a href="#procedimiento">Proceso</a></li>
+                <li><a href="#historia">Historia</a></li>
+                <li><a href="#trayectoria">Trayectoria</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
+                <li><a href="#contacto" class="nav-btn">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- BLOQUE 1: FONDO DE LA JUSTICIA (INICIO, ÁREAS, PROCEDIMIENTO E HISTORIA) -->
+    <div class="justice-section-block">
+
+        <!-- PORTADA / HERO SECTION -->
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <span class="hero-badge">ASESORÍA JURÍDICA INTEGRAL</span>
+                <h1>GONZALEZ MAXIMILIANO</h1>
+                <h2>Soluciones Legales con Compromiso e Integridad</h2>
+                <p>Atención personalizada en Derecho de Familia, Civil, Comercial y Laboral. Defensa sólida de tus derechos con máxima confidencialidad.</p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/542215928727" target="_blank" class="btn-primary">
+                        <svg class="btn-wa-icon" viewBox="0 0 32 32">
+                            <path fill="currentColor" d="M16 2a13 13 0 0 0-11 20.1L3 29l7.1-1.9A13 13 0 1 0 16 2zm6.6 18.6c-.3.8-1.5 1.5-2.1 1.6-.6.1-1.4.2-4.5-1-3.8-1.5-6.3-5.4-6.5-5.7-.2-.3-1.6-2.1-1.6-4 0-1.9 1-2.8 1.3-3.2.3-.4.8-.5 1.1-.5.3 0 .6 0 .9.1.3 0 .7-.1 1 .7.4.9 1.3 3.1 1.4 3.3.1.2.1.5 0 .7-.1.2-.2.4-.4.6-.2.2-.4.4-.2.8.5.9 1.8 2.2 3.1 3.2 1.3 1 2.3 1.3 2.8 1.5.4.2.8.1 1-.2.3-.4.9-1.2 1.2-1.6.3-.4.7-.3 1.1-.2.4.1 2.5 1.2 2.9 1.4.4.2.7.3.8.5.1.4-.2 1.5-.5 2.1z"/>
+                        </svg>
+                        Consultar Ahora
+                    </a>
+                    <a href="#areas" class="btn-secondary-hero">Ver Áreas de Práctica</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ÁREAS DE PRÁCTICA -->
+        <section id="areas" class="dynamic-section">
+            <h2 class="section-title light reveal-left">Áreas de Práctica</h2>
+            <p class="section-subtitle light reveal-left">Especialización y enfoque estratégico para cada caso</p>
+            
+            <div class="cards-grid">
+                
+                <div class="card-container reveal-left">
+                    <input type="checkbox" id="card1" class="flip-checkbox">
+                    <label for="card1" class="flip-card">
+                        <div class="card-front">
+                            <div class="card-img-header family-bg"></div>
+                            <div class="card-icon">⚖️</div>
+                            <div class="card-front-content">
+                                <h3>Derecho de Familia</h3>
+                                <p>Resolución justa y humana en conflictos familiares y patrimoniales.</p>
+                                <span class="click-hint">Toca para ver detalles ➔</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h3>Derecho de Familia</h3>
+                            <p>Asesoramiento y patrocinio en:</p>
+                            <ul>
+                                <li>Divorcios unilaterales y de mutuo acuerdo.</li>
+                                <li>Responsabilidad parental y cuidado personal.</li>
+                                <li>Régimen de alimentos y comunicación.</li>
+                                <li>Liquidación de sociedad conyugal.</li>
+                            </ul>
+                            <span class="click-hint">Toca para volver</span>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="card-container reveal-left">
+                    <input type="checkbox" id="card2" class="flip-checkbox">
+                    <label for="card2" class="flip-card">
+                        <div class="card-front">
+                            <div class="card-img-header civil-bg"></div>
+                            <div class="card-icon">🏛️</div>
+                            <div class="card-front-content">
+                                <h3>Civil y Comercial</h3>
+                                <p>Protección de su patrimonio, contratos y reclamos de indemnización.</p>
+                                <span class="click-hint">Toca para ver detalles ➔</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h3>Civil y Comercial</h3>
+                            <p>Gestión integral en:</p>
+                            <ul>
+                                <li>Sucesiones y declaratoria de herederos.</li>
+                                <li>Redacción y revisión de contratos.</li>
+                                <li>Daños y perjuicios / Accidentes.</li>
+                                <li>Desalojos y ejecuciones.</li>
+                            </ul>
+                            <span class="click-hint">Toca para volver</span>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="card-container reveal-left">
+                    <input type="checkbox" id="card3" class="flip-checkbox">
+                    <label for="card3" class="flip-card">
+                        <div class="card-front">
+                            <div class="card-img-header labor-bg"></div>
+                            <div class="card-icon">💼</div>
+                            <div class="card-front-content">
+                                <h3>Derecho Laboral</h3>
+                                <p>Defensa de los derechos del trabajador e indemnizaciones justas.</p>
+                                <span class="click-hint">Toca para ver detalles ➔</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h3>Derecho Laboral</h3>
+                            <p>Patrocinio especializado en:</p>
+                            <ul>
+                                <li>Despidos intempestivos e indemnizaciones.</li>
+                                <li>Trabajo no registrado (en negro).</li>
+                                <li>Accidentes de trabajo y ART.</li>
+                                <li>Acoso u hostigamiento laboral.</li>
+                            </ul>
+                            <span class="click-hint">Toca para volver</span>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="card-container reveal-left">
+                    <input type="checkbox" id="card4" class="flip-checkbox">
+                    <label for="card4" class="flip-card">
+                        <div class="card-front">
+                            <div class="card-img-header doc-bg"></div>
+                            <div class="card-icon">📜</div>
+                            <div class="card-front-content">
+                                <h3>Asesoramiento Legal</h3>
+                                <p>Atención preventiva y confección de documentación técnica.</p>
+                                <span class="click-hint">Toca para ver detalles ➔</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h3>Asesoramiento Legal</h3>
+                            <p>Servicios preventivos:</p>
+                            <ul>
+                                <li>Cartas documento y notificaciones.</li>
+                                <li>Mediaciones previas obligatorias.</li>
+                                <li>Asesoramiento preventivo continuo.</li>
+                                <li>Trámites ante organismos públicos.</li>
+                            </ul>
+                            <span class="click-hint">Toca para volver</span>
+                        </div>
+                    </label>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PROCEDIMIENTO DE ATENCIÓN -->
+        <section id="procedimiento" class="dynamic-section process-section">
+            <h2 class="section-title light reveal-left">¿Cómo Trabajamos Juntos?</h2>
+            <p class="section-subtitle light reveal-left">Un proceso cercano, claro y diseñado para tu tranquilidad</p>
+
+            <div class="process-grid">
+                <div class="process-card reveal-left">
+                    <div class="process-number">01</div>
+                    <div class="process-icon">💬</div>
+                    <h3>Escuchamos tu Historia</h3>
+                    <p>En el primer contacto analizamos tu situación con total confidencialidad y empatía. Nos enfocamos en entender no solo el conflicto legal, sino también tu realidad personal.</p>
+                </div>
+
+                <div class="process-card reveal-left">
+                    <div class="process-number">02</div>
+                    <div class="process-icon">🔎</div>
+                    <h3>Analizamos la Estrategia</h3>
+                    <p>Estudiamos minuciosamente los antecedentes y normativas aplicables para diseñar el plan de acción más eficiente, explicándote cada paso de forma sencilla y transparente.</p>
+                </div>
+
+                <div class="process-card reveal-left">
+                    <div class="process-number">03</div>
+                    <div class="process-icon">⚖️</div>
+                    <h3>Construimos la Solución</h3>
+                    <p>Asumimos la representación firme de tus derechos, acompañándote en cada instancia del proceso hasta alcanzar el resultado que te brinde paz y resguardo legal.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- HISTORIA PERSONAL -->
+        <section id="historia" class="dynamic-section">
+            <h2 class="section-title light reveal-left">Historia Personal</h2>
+            <p class="section-subtitle light reveal-left">Trayectoria, formación y vocación de servicio</p>
+
+            <div class="bio-card-wrapper reveal-left">
+                <div class="bio-avatar-block">
+                    <img src="foto 4.jpg" alt="Abog. Gonzalez Maximiliano" class="bio-avatar-img">
+                </div>
+                <div class="bio-info-block">
+                    <div class="bio-header-title">
+                        <h3>Abog. Gonzalez Maximiliano</h3>
+                    </div>
+                    <p class="matricula-text">Abogado orientado en Derecho Integral</p>
+                    <p>Mi ejercicio profesional se basa en la transparencia, el estudio exhaustivo de cada causa y la búsqueda incesante de la justicia. Entiendo que detrás de cada caso hay personas y familias que requieren no solo representación técnica, sino también empatía y firmeza.</p>
+                    <p>Con un constante perfeccionamiento en el ámbito legal, brindo asistencia técnica eficiente y cercana a cada cliente.</p>
+                </div>
+            </div>
+        </section>
+
+    </div> <!-- FIN BLOQUE JUSTICIA -->
+
+    <!-- BLOQUE 2: FONDO DINÁMICO DE EDIFICIO -->
+    <div class="building-section-block">
+
+        <!-- TRAYECTORIA, GALERÍA Y FRASES -->
+        <section id="trayectoria" class="dynamic-section">
+            <h2 class="section-title light reveal-left">Trayectoria e Integridad Profesional</h2>
+            <p class="section-subtitle light reveal-left">Compromiso institucional y atención personalizada</p>
+
+            <div class="bio-gallery">
+                <div class="gallery-item reveal-left">
+                    <img src="foto 2.jpg" alt="Colegio de Abogados">
+                    <div class="gallery-overlay-text">
+                        <h4>Colegio de Abogados</h4>
+                        <p>Matriculado en el Colegio de la Abogacía</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal-left">
+                    <img src="foto 1.png" alt="Atención en Estudio Jurídico">
+                    <div class="gallery-overlay-text">
+                        <h4>Atención en Estudio Jurídico</h4>
+                        <p>Asesoramiento personalizado y confidencial</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal-left">
+                    <img src="foto 3.png" alt="Ejercicio e Integridad Profesional">
+                    <div class="gallery-overlay-text">
+                        <h4>Ejercicio e Integridad Profesional</h4>
+                        <p>Ética y excelencia en la defensa de sus derechos</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FRASES -->
+            <div class="phrases-grid">
+                <div class="phrase-card reveal-left">
+                    <div class="phrase-icon">⚖️</div>
+                    <div class="phrase-text">"La justicia es la constante y perpetua voluntad de dar a cada uno su derecho."</div>
+                    <div class="phrase-author">Ulpiano</div>
+                </div>
+                <div class="phrase-card reveal-left">
+                    <div class="phrase-icon">📜</div>
+                    <div class="phrase-text">"Tu deber es luchar por el Derecho, pero el día que encuentres en conflicto el Derecho con la Justicia, lucha por la Justicia."</div>
+                    <div class="phrase-author">Eduardo Couture</div>
+                </div>
+                <div class="phrase-card reveal-left">
+                    <div class="phrase-icon">👁️</div>
+                    <div class="phrase-text">"El verdadero poder no necesita dominar a otros; el poder sobre los demás es violencia, el poder sobre uno mismo es maestría."</div>
+                    <div class="phrase-author">Osho</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- UBICACIÓN -->
+        <section id="ubicacion" class="dynamic-section">
+            <h2 class="section-title light reveal-left">Ubicación y Cómo Llegar</h2>
+            <p class="section-subtitle light reveal-left">Atención presencial en nuestro estudio jurídico</p>
+
+            <div class="map-wrapper reveal-left">
+                <div class="map-frame">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.828292839211!2d-57.9565!3d-34.9205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e62b1f1f1f1f%3A0x1f1f1f1f1f1f1f1f!2sLa%20Plata%2C%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1620000000000!5m2!1ses!2sar" 
+                        width="100%" 
+                        height="320" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <div class="map-card-info">
+                    <h3>Estudio Jurídico</h3>
+                    <p>📍 <strong>La Plata, Buenos Aires, Argentina</strong></p>
+                    <p>🕒 <strong>Horarios de Atención:</strong> Lunes a Viernes de 9:00 a 18:00 hs</p>
+                    <p>📞 <strong>Contacto Directo:</strong> 221 592-8727</p>
+                    <p>✉️ <strong>Atención:</strong> Presencial únicamente con turno previo acordado.</p>
+                    <a href="https://wa.me/542215928727" target="_blank" class="btn-secondary">Solicitar Turno por WhatsApp</a>
+                </div>
+            </div>
+        </section>
+
+    </div> <!-- FIN BLOQUE EDIFICIO -->
+
+    <!-- SECCIÓN DE FOOTER CON FONDO DE BIBLIOTECA JURÍDICA -->
+    <div id="contacto" class="footer-wrapper">
+        <div class="footer-wave-divider">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0 C150,90 350,-40 500,45 C650,130 900,10 1200,50 L1200,120 L0,120 Z" fill="#0b1320"></path>
+            </svg>
+        </div>
+
+        <footer class="footer-contact">
+            <div class="footer-grid">
+                <div class="contact-data reveal-left">
+                    <h3>GONZALEZ MAXIMILIANO</h3>
+                    <p class="footer-sub">Estudio Jurídico & Asesoría Integral</p>
+                    <p><strong>Teléfono / WhatsApp:</strong> <a href="https://wa.me/542215928727" target="_blank">221 592-8727</a></p>
+                    <p><strong>Especialidades:</strong> Familia, Civil, Comercial y Laboral</p>
+                </div>
+                
+                <div class="social-data">
+                    <h3 class="reveal-left">Redes Sociales y Contacto</h3>
+                    <div class="social-links-grid">
+                        <a href="https://www.facebook.com" target="_blank" class="social-btn facebook reveal-left">
+                            <span class="social-icon">f</span> Facebook
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank" class="social-btn instagram reveal-left">
+                            <span class="social-icon">📷</span> Instagram
+                        </a>
+                        <a href="https://www.linkedin.com" target="_blank" class="social-btn linkedin reveal-left">
+                            <span class="social-icon">in</span> LinkedIn
+                        </a>
+                        <a href="https://wa.me/542215928727" target="_blank" class="social-btn whatsapp reveal-left">
+                            <span class="social-icon">💬</span> WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright reveal-left">
+                <p>&copy; 2026 Abog. GONZALEZ MAXIMILIANO. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- BOTONES FLOTANTES -->
+    <a href="https://wa.me/542215928727" class="whatsapp-btn-float" target="_blank" title="Contactar por WhatsApp">
+        <svg class="wa-svg" viewBox="0 0 32 32">
+            <path fill="#ffffff" d="M16 2a13 13 0 0 0-11 20.1L3 29l7.1-1.9A13 13 0 1 0 16 2zm6.6 18.6c-.3.8-1.5 1.5-2.1 1.6-.6.1-1.4.2-4.5-1-3.8-1.5-6.3-5.4-6.5-5.7-.2-.3-1.6-2.1-1.6-4 0-1.9 1-2.8 1.3-3.2.3-.4.8-.5 1.1-.5.3 0 .6 0 .9.1.3 0 .7-.1 1 .7.4.9 1.3 3.1 1.4 3.3.1.2.1.5 0 .7-.1.2-.2.4-.4.6-.2.2-.4.4-.2.8.5.9 1.8 2.2 3.1 3.2 1.3 1 2.3 1.3 2.8 1.5.4.2.8.1 1-.2.3-.4.9-1.2 1.2-1.6.3-.4.7-.3 1.1-.2.4.1 2.5 1.2 2.9 1.4.4.2.7.3.8.5.1.4-.2 1.5-.5 2.1z"/>
+        </svg>
+    </a>
+
+    <a href="#inicio" class="scroll-top-btn" title="Volver arriba">↑</a>
+
+    <!-- SCRIPT DE ANIMACIÓN SCROLL -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                root: null,
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal-left').forEach(el => observer.observe(el));
+        });
+    </script>
+
+</body>
+</html>

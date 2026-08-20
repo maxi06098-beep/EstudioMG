@@ -1,0 +1,930 @@
+/* ==========================================================================
+   1. VARIABLES, RESET Y ESTILOS GLOBALES
+   ========================================================================== */
+:root {
+    --bg-dark-1: #0b1320;
+    --bg-dark-2: #111827;
+    --bg-card: rgba(17, 24, 39, 0.75);
+    --gold: #d4af37;
+    --gold-light: #f3e5ab;
+    --gold-hover: #b89628;
+    --text-light: #ffffff;
+    --text-muted: #94a3b8;
+    --text-gray: #cbd5e1;
+    --border-gold: rgba(212, 175, 55, 0.35);
+    
+    --font-heading: 'Cinzel', serif;
+    --font-subheading: 'Cormorant Garamond', serif;
+    --font-body: 'Montserrat', sans-serif;
+
+    --transition-fast: 0.3s ease;
+    --transition-smooth: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--font-body);
+    background-color: var(--bg-dark-1);
+    color: var(--text-light);
+}
+
+body {
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-fast);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.gold {
+    color: var(--gold) !important;
+}
+
+/* ==========================================================================
+   2. BARRA DE NAVEGACIÓN (NAVBAR) CON SEPARADORES DORADOS
+   ========================================================================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: rgba(11, 19, 32, 0.94);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-gold);
+}
+
+.logo-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-monogram {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #fff;
+    border: 2px solid var(--gold);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.logo-text-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-title {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo-subtext {
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    color: var(--gold);
+    font-weight: 600;
+}
+
+.navbar nav ul {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.navbar nav ul li {
+    position: relative;
+    padding: 0 16px;
+}
+
+/* Separadores laterales dorados sutiles entre solapas */
+.navbar nav ul li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 16px;
+    background: linear-gradient(180deg, transparent, var(--gold), transparent);
+    opacity: 0.5;
+}
+
+.navbar nav a {
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-gray);
+}
+
+.navbar nav a:hover {
+    color: var(--gold);
+}
+
+.nav-btn {
+    border: 1px solid var(--gold);
+    padding: 7px 16px;
+    border-radius: 4px;
+    color: var(--gold) !important;
+}
+
+.nav-btn:hover {
+    background: var(--gold);
+    color: var(--bg-dark-1) !important;
+}
+
+/* ==========================================================================
+   3. BLOQUES DE FONDO DINÁMICO
+   ========================================================================== */
+/* Bloque 1: Fondo de la Justicia */
+.justice-section-block {
+    background: linear-gradient(180deg, rgba(11, 19, 32, 0.88) 0%, rgba(11, 19, 32, 0.94) 100%),
+                url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1600') center/cover fixed no-repeat;
+    padding-bottom: 60px;
+}
+
+/* Bloque 2: Fondo de Edificio */
+.building-section-block {
+    background: linear-gradient(180deg, rgba(11, 19, 32, 0.92) 0%, rgba(17, 24, 39, 0.96) 100%),
+                url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600') center/cover fixed no-repeat;
+    padding: 60px 0;
+}
+
+/* ==========================================================================
+   4. HERO SECTION (PORTADA)
+   ========================================================================== */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 20px 60px 20px;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background: rgba(212, 175, 55, 0.05);
+}
+
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.hero h2 {
+    font-family: var(--font-subheading);
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--gold-light);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1rem;
+    color: var(--text-gray);
+    margin-bottom: 35px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    color: #fff;
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.btn-wa-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.btn-secondary-hero {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.btn-secondary-hero:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+/* ==========================================================================
+   5. SECCIONES GENERALES Y TÍTULOS
+   ========================================================================== */
+.dynamic-section {
+    padding: 80px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--gold);
+    margin-bottom: 50px;
+}
+
+/* ==========================================================================
+   6. ÁREAS DE PRÁCTICA (3D FLIP CARDS)
+   ========================================================================== */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+/* Retardo de aparición escalonado en Áreas de práctica */
+.cards-grid .reveal-left:nth-child(1) { transition-delay: 0.1s; }
+.cards-grid .reveal-left:nth-child(2) { transition-delay: 0.25s; }
+.cards-grid .reveal-left:nth-child(3) { transition-delay: 0.4s; }
+.cards-grid .reveal-left:nth-child(4) { transition-delay: 0.55s; }
+
+.card-container {
+    perspective: 1000px;
+}
+
+.flip-checkbox {
+    display: none;
+}
+
+.flip-card {
+    display: block;
+    width: 100%;
+    height: 380px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform var(--transition-smooth);
+    cursor: pointer;
+}
+
+.flip-checkbox:checked + .flip-card {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    border: 1px solid var(--border-gold);
+    background: var(--bg-card);
+    backdrop-filter: blur(8px);
+    overflow: hidden;
+}
+
+.card-front {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img-header {
+    height: 140px;
+    background-size: cover;
+    background-position: center;
+}
+
+.family-bg { background-image: url('https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=600'); }
+.civil-bg { background-image: url('https://images.unsplash.com/photo-1450133064473-71024230f91b?q=80&w=600'); }
+.labor-bg { background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=600'); }
+.doc-bg { background-image: url('https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=600'); }
+
+.card-icon {
+    font-size: 2rem;
+    margin-top: -25px;
+    margin-left: 20px;
+    background: var(--bg-dark-1);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid var(--gold);
+}
+
+.card-front-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.card-front-content h3 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.card-front-content p {
+    font-size: 0.85rem;
+    color: var(--text-gray);
+}
+
+.click-hint {
+    font-size: 0.75rem;
+    color: var(--gold);
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--bg-dark-2);
+}
+
+.card-back h3 {
+    font-family: var(--font-heading);
+    color: var(--gold);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.card-back p {
+    font-size: 0.85rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.card-back ul {
+    margin-bottom: 15px;
+}
+
+.card-back li {
+    font-size: 0.8rem;
+    color: var(--text-gray);
+    margin-bottom: 6px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.card-back li::before {
+    content: "•";
+    color: var(--gold);
+    position: absolute;
+    left: 0;
+}
+
+/* ==========================================================================
+   7. PROCEDIMIENTO / PROCESO DE TRABAJO
+   ========================================================================== */
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.process-grid .reveal-left:nth-child(1) { transition-delay: 0.1s; }
+.process-grid .reveal-left:nth-child(2) { transition-delay: 0.25s; }
+.process-grid .reveal-left:nth-child(3) { transition-delay: 0.4s; }
+
+.process-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-gold);
+    padding: 35px 25px;
+    border-radius: 12px;
+    position: relative;
+    backdrop-filter: blur(8px);
+}
+
+.process-number {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: rgba(212, 175, 55, 0.15);
+}
+
+.process-icon {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.process-card h3 {
+    font-family: var(--font-heading);
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.process-card p {
+    font-size: 0.88rem;
+    color: var(--text-gray);
+}
+
+/* ==========================================================================
+   8. HISTORIA PERSONAL (FONDO TRANSPARENTE)
+   ========================================================================== */
+.bio-card-wrapper {
+    display: flex;
+    background: rgba(11, 19, 32, 0.35); /* Fondo sutil transparente para ver la Justicia */
+    border: 1px solid var(--border-gold);
+    border-radius: 12px;
+    overflow: hidden;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.bio-avatar-block {
+    flex: 0 0 350px;
+}
+
+.bio-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bio-info-block {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bio-header-title h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.matricula-text {
+    color: var(--gold);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.bio-info-block p {
+    font-size: 0.92rem;
+    color: var(--text-gray);
+    margin-bottom: 12px;
+}
+
+/* ==========================================================================
+   9. TRAYECTORIA PERSONAL, GALERÍA Y FRASES
+   ========================================================================== */
+.bio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+/* Retardo escalonado para las imágenes de Trayectoria */
+.bio-gallery .reveal-left:nth-child(1) { transition-delay: 0.1s; }
+.bio-gallery .reveal-left:nth-child(2) { transition-delay: 0.25s; }
+.bio-gallery .reveal-left:nth-child(3) { transition-delay: 0.4s; }
+
+.gallery-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 240px;
+    border: 1px solid var(--border-gold);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-smooth);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-overlay-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(180deg, transparent 0%, rgba(11, 19, 32, 0.95) 100%);
+}
+
+.gallery-overlay-text h4 {
+    font-family: var(--font-heading);
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.gallery-overlay-text p {
+    font-size: 0.8rem;
+    color: var(--gold);
+}
+
+/* Frases */
+.phrases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.phrases-grid .reveal-left:nth-child(1) { transition-delay: 0.1s; }
+.phrases-grid .reveal-left:nth-child(2) { transition-delay: 0.25s; }
+.phrases-grid .reveal-left:nth-child(3) { transition-delay: 0.4s; }
+
+.phrase-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-left: 3px solid var(--gold);
+    padding: 25px;
+    border-radius: 0 8px 8px 0;
+}
+
+.phrase-icon {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.phrase-text {
+    font-family: var(--font-subheading);
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--text-light);
+    margin-bottom: 10px;
+}
+
+.phrase-author {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--gold);
+    text-align: right;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   10. UBICACIÓN Y MAPA
+   ========================================================================== */
+.map-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-gold);
+    border-radius: 12px;
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+}
+
+.map-frame {
+    height: 100%;
+    min-height: 320px;
+}
+
+.map-card-info {
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.map-card-info h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.map-card-info p {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    margin-bottom: 12px;
+}
+
+.btn-secondary {
+    display: inline-block;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.btn-secondary:hover {
+    background: var(--gold);
+    color: var(--bg-dark-1);
+}
+
+/* ==========================================================================
+   11. FOOTER Y REDES SOCIALES (COLORES SOBRIOS QUE COMBINAN CON EL AZUL)
+   ========================================================================== */
+.footer-wrapper {
+    position: relative;
+    background: linear-gradient(180deg, rgba(11, 19, 32, 0.85) 0%, rgba(11, 19, 32, 0.96) 100%), 
+                url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1600') center/cover no-repeat;
+    color: #ffffff;
+    padding-top: 0;
+    overflow: hidden;
+}
+
+.footer-wave-divider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.footer-wave-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 60px;
+}
+
+.footer-contact {
+    position: relative;
+    z-index: 2;
+    padding: 40px 20px 30px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.contact-data h3, .social-data h3 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer-sub {
+    color: var(--gold) !important;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.contact-data p {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    color: var(--text-gray);
+}
+
+.social-links-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: var(--transition-fast);
+}
+
+/* Colores de redes desaturados y sobrios */
+.social-btn.facebook {
+    background: rgba(24, 119, 242, 0.12);
+    border: 1px solid rgba(24, 119, 242, 0.35);
+    color: #8bb3f8;
+}
+.social-btn.facebook:hover {
+    background: rgba(24, 119, 242, 0.28);
+    color: #ffffff;
+    border-color: #1877f2;
+}
+
+.social-btn.instagram {
+    background: rgba(225, 48, 108, 0.12);
+    border: 1px solid rgba(225, 48, 108, 0.35);
+    color: #f282a5;
+}
+.social-btn.instagram:hover {
+    background: rgba(225, 48, 108, 0.28);
+    color: #ffffff;
+    border-color: #e1306c;
+}
+
+.social-btn.linkedin {
+    background: rgba(10, 102, 194, 0.12);
+    border: 1px solid rgba(10, 102, 194, 0.35);
+    color: #72b2ee;
+}
+.social-btn.linkedin:hover {
+    background: rgba(10, 102, 194, 0.28);
+    color: #ffffff;
+    border-color: #0a66c2;
+}
+
+.social-btn.whatsapp {
+    background: rgba(37, 211, 102, 0.12);
+    border: 1px solid rgba(37, 211, 102, 0.35);
+    color: #73e89e;
+}
+.social-btn.whatsapp:hover {
+    background: rgba(37, 211, 102, 0.28);
+    color: #ffffff;
+    border-color: #25d366;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-muted) !important;
+}
+
+/* ==========================================================================
+   12. BOTONES FLOTANTES Y ANIMACIÓN DE APARICIÓN TENUE (REVEAL)
+   ========================================================================== */
+.whatsapp-btn-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 55px;
+    height: 55px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    z-index: 999;
+    transition: transform var(--transition-fast);
+}
+
+.whatsapp-btn-float:hover {
+    transform: scale(1.1);
+}
+
+.wa-svg {
+    width: 32px;
+    height: 32px;
+}
+
+.scroll-top-btn {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    width: 45px;
+    height: 45px;
+    background: rgba(11, 19, 32, 0.8);
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    z-index: 999;
+}
+
+.scroll-top-btn:hover {
+    background: var(--gold);
+    color: var(--bg-dark-1);
+}
+
+/* EFECTO DE APARICIÓN TENUE Y ELEGANTE CON SCROLL */
+.reveal-left {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-left.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   13. ADAPTATIVO / RESPONSIVE (CELULARES Y TABLETS)
+   ========================================================================== */
+@media (max-width: 900px) {
+    .bio-card-wrapper, .map-wrapper {
+        flex-direction: column;
+        grid-template-columns: 1fr;
+    }
+
+    .bio-avatar-block {
+        flex: none;
+        height: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 12px 20px;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.3rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .footer-grid {
+        flex-direction: column;
+    }
+}
